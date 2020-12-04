@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    setState()更状态的两种方法：
+    1）.setState(updater,[callback]).-------函数
+    updater为返回stateChange 对象的函数 ：(state,props)=>stateChange
+    2).setState（stateChange,[callback])-----对象
+       stateChange为对象
+       callback为可选的回调函数，在状态更新前界面更新之后才执行
+       总结：
+       对象方式是函数方式的简写方式：
+        如果新状态不依赖于原状态===》使用对象方式
+        如果新状态依赖于原状态===》使用函数方式
+       如果需要在setState（）后获取最新的状态数据，在第二个callback函数中读取
+     */
+</script>
+</body>
+</html>

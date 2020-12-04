@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    1.Component存在的问题
+        1).父组件重新render(),当前组件也会重新执行render(),即使没有任何的变化
+        2).当前组件setState(),重新执行render(),即使state没有任何变化
+
+     2.解决Component存在的问题
+        1).原因：组件的componentShouldUpdate()默认返回true，即使数据没有任何变化render()都会重新执行
+        2).办法1：重写shouldComponentUpdate()，判断如果数据有变化返回true，否则返回false
+        3).办法2：使用PureComponent代替Component
+        4).说明：一般都使用PureComponent
+
+     3.PureComponent的基本原理
+        1).重写实现shouldComponentUpdate()
+        2).对组件的新|旧state和props中的数据进行浅比较，如果都没有变化，返回false，否则返回true；
+        3).一旦componentShouldUpdate()返回false不再执行用于更新的 render()
+
+        4.面试题：
+        组件的那个生命周期钩子能实现组件优化？
+        PureComponent的原理？
+        区别Component与PureComponent？
+     */
+</script>
+</body>
+</html>
